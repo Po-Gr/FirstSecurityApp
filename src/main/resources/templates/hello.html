@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Человек</title>
 </head>
 <body>
-Hello my Friends!!
+
+<h3 th:text="${person.getUsername() + ', ' + person.getYearOfBirth()}">VALUE</h3>
+
 </body>
 </html>
