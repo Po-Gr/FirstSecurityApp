@@ -10,7 +10,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HelloController {
     @GetMapping("/hello")
-    public String seyHello() {
+    public String seyHello(Model model) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        PersonDetails personDetails = (PersonDetails)authentication.getPrincipal();
+        model.addAttribute(personDetails.getPerson());
         return "hello";
     }
 
