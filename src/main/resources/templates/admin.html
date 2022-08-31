@@ -2,13 +2,11 @@
 <html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Человек</title>
+    <title>Admin page</title>
 </head>
 <body>
 
-<h3 th:text="${person.getUsername() + ', ' + person.getYearOfBirth()}">VALUE</h3>
-
-<h3>HELLO ALL!!</h3>
+<h3>Это администратор сайта</h3>
 
 <form th:action="@{/logout}" th:method="POST">
     <input type="submit" value="Logout">
